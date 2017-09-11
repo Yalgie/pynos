@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pynos</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 flex">
+				<h1>Pynos</h1>
+				<p>Text to mp3 PA system</p>
+				<form action="/play" method="post">
+					<textarea rows="5" class="form-control" type="text" name="text"></textarea>
+			    	<button class="top-buffer form-control btn btn-success" type="submit">Generate Audio</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
