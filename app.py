@@ -21,19 +21,22 @@ class Sonos():
 		tts = gTTS(text=text, lang='en')
 		tts.save("sound.mp3")
 		audio = MP3("sound.mp3")
+		
+		# print soco.discover()
+		# for speaker in soco.discover(timeout=5):
+		# 	print speaker
+			# snap = Snapshot(speaker) 
+			# snap.snapshot()
 
-		for speaker in soco.discover():
-			snap = Snapshot(speaker) 
-			snap.snapshot()
+			# speaker.volume = 50
+			# speaker.play_uri("http://192.168.0.3:8080/sound.mp3")
 
-			speaker.volume = 50
-			speaker.play_uri("http://192.168.0.3:8080/sound.mp3")
-
-			time.sleep(audio.info.length)
-			snap.restore()
+			# time.sleep(audio.info.length)
+			# snap.restore()
 
 if __name__ == '__main__':
-	app.run(
-		host = "0.0.0.0",
-		debug = True
-	)
+	# app.run(
+	# 	host = "0.0.0.0",
+	# 	debug = True
+	# )
+	Sonos().play("Test")
